@@ -24,7 +24,7 @@ defmodule RomanNumerals do
   end
 
   def romanNumeralFor(arabic) do
-    arabicRoman = Enum.find(@arabicToRoman, fn {a, _} -> arabic >= a end)
-    elem(arabicRoman, 1) <> romanNumeralFor(arabic - elem(arabicRoman, 0))
+    {max_arabic, roman} = Enum.find(@arabicToRoman, fn {a, _} -> arabic >= a end)
+    roman <> romanNumeralFor(arabic - max_arabic)
   end
 end
