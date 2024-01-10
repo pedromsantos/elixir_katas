@@ -15,13 +15,8 @@ defmodule RomanNumerals do
     {1, "I"}
   ]
 
-  def romanNumeralFor(0) do
-    ""
-  end
-
-  def romanNumeralFor(arabic) when arabic > 3999 do
-    ""
-  end
+  def romanNumeralFor(0), do: ""
+  def romanNumeralFor(arabic) when arabic > 3999, do: ""
 
   def romanNumeralFor(arabic) do
     {max_arabic, roman} = Enum.find(@arabicToRoman, fn {a, _} -> arabic >= a end)
