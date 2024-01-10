@@ -8,4 +8,11 @@ defmodule FibonacciShould do
                    end do
     [{0, 0}, {1, 1}, {2, 1}, {3, 2}, {4, 3}, {5, 5}, {6, 8}, {7, 13}, {12, 144}]
   end
+
+  test_with_params "optimized fibonacci number for index",
+                   fn number, expected ->
+                     assert Fibonacci.fibonacci_optimized(number) == expected
+                   end do
+    [{0, 0}, {1, 1}, {2, 1}, {3, 2}, {4, 3}, {5, 5}, {6, 8}, {7, 13}, {12, 144}]
+  end
 end
