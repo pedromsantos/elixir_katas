@@ -15,11 +15,11 @@ defmodule RomanNumerals do
     {1, "I"}
   ]
 
-  def romanNumeralFor(arabic) when arabic > 3999 do
+  def romanNumeralFor(0) do
     ""
   end
 
-  def romanNumeralFor(arabic) when arabic == 0 do
+  def romanNumeralFor(arabic) when arabic > 3999 do
     ""
   end
 
