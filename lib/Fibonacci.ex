@@ -7,10 +7,10 @@ defmodule Fibonacci do
   end
 
   def fibonacci_optimized(index), do: fibonacci_optimized(index, 0, 1)
-  def fibonacci_optimized(1, _, result), do: result
-  def fibonacci_optimized(0, _, _), do: 0
+  defp fibonacci_optimized(1, _, result), do: result
+  defp fibonacci_optimized(0, _, _), do: 0
 
-  def fibonacci_optimized(index, acc1, acc2) do
+  defp fibonacci_optimized(index, acc1, acc2) do
     fibonacci_optimized(index - 1, acc2, acc1 + acc2)
   end
 end
